@@ -1,0 +1,39 @@
+const question = document.querySelector(".question");
+const answer = document.querySelector(".answer");
+const arrow = document.getElementsByTagName("img");
+
+question.addEventListener("click", () => {
+  if (answer.classList.contains("display")) {
+    answer.classList.remove("display");
+    arrow[0].style.transform = "rotate(0deg)";
+  } else {
+    answer.classList.add("display");
+    arrow[0].style.transform = "rotate(180deg)";
+  }
+});
+
+// Checks if the clicked question corresponding answer is currently displayed
+const visible = answer[index].classList.contains("display");
+
+// Removes the "display" from all the answers to hide them
+answer.forEach((ans) => {
+  ans.classList.remove("display");
+});
+
+// Adds the "display" to the answer of the clicked question
+answer[index].classList.add("display");
+
+// Removes the "rotate" from all the arrows
+arrow.forEach((arr) => {
+  arr.classList.remove("rotate");
+});
+
+// Checks if the clicked question answer was not previously displayed
+if (!visible) {
+  // If it wasn't, it adds the display class to the answer and the rotate class to the corresponding arrow
+  answer[index].classList.add("display");
+  arrow[index].classList.add("rotate");
+} else {
+  // If it was displayed, it removes the display class to hide the answer
+  answer[index].classList.remove("display");
+}
