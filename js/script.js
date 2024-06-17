@@ -45,7 +45,7 @@ question.forEach((qtn, index) => {
   };
 
   const touchHandler = () => {
-    TouchEvent = true;
+    touchEvent = true;
     toggleAnswer(index);
   };
 
