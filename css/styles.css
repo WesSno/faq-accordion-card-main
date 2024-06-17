@@ -113,7 +113,7 @@ h1 {
 }
 
 .q-str.no-hover:hover {
-  color: inherit;
+  pointer-events: none;
 }
 
 .q-str img {

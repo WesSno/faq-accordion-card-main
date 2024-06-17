@@ -38,7 +38,10 @@ question.forEach((qtn, index) => {
   const clickHandler = () => {
     if (touchEvent) {
       touchEvent = false;
-      question[index].classList.add(".no-hover");
+      qtn[index].classList.add(".no-hover");
+      setTimeout(() => {
+        qtn[index].classList.remove("no-hover");
+      }, 300);
       return;
     }
     toggleAnswer(index);
