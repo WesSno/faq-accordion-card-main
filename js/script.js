@@ -47,9 +47,6 @@ question.forEach((qtn, index) => {
     touchEvent = true;
     toggleAnswer(index);
     qtn.classList.add("no-hover");
-    setTimeout(() => {
-      qtn.classList.remove("no-hover");
-    }, 300);
   };
 
   qtn.addEventListener("click", clickHandler);
