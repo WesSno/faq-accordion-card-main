@@ -38,10 +38,6 @@ question.forEach((qtn, index) => {
   const clickHandler = () => {
     if (touchEvent) {
       touchEvent = false;
-      qtn[index].classList.add(".no-hover");
-      setTimeout(() => {
-        qtn[index].classList.remove("no-hover");
-      }, 300);
       return;
     }
     toggleAnswer(index);
@@ -49,6 +45,10 @@ question.forEach((qtn, index) => {
 
   const touchHandler = () => {
     touchEvent = true;
+    qtn[index].classList.add(".no-hover");
+    // setTimeout(() => {
+    //   qtn[index].classList.remove("no-hover");
+    // }, 300);
     toggleAnswer(index);
   };
 
